@@ -1,20 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Student Information Manager
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
 
+<ion-card *ngFor = "let student of students" color="dark">
+  <ion-item>
+
+    <!-- <ion-avatar slot="start">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar> -->
+
+    <!-- <ion-card-header>
+      <ion-card-subtitle>{{student.studentID}}</ion-card-subtitle>
+      <ion-card-title>{{student.name}}</ion-card-title>
+    </ion-card-header> -->
+
+    <ion-card-content>
+      <ion-card-subtitle>{{student.studentID}}</ion-card-subtitle>
+      <ion-card-title>{{student.name}}</ion-card-title>
+        <!-- <h1>Class           : {{student.classID}}</h1> -->
+        <p><b>Date of Birth</b>   : {{student.dateOfBirth}}</p>
+        <p><b>Enrollment Date</b> : {{student.enrollmentDate}}</p>
+        <p><b>Father's Name</b>    : {{student.fathersName}}</p>
+        <p><b>Mother's Name</b>    : {{student.mothersName}}</p>
+        <p><b>Address</b>         : {{student.address}}</p>
+    </ion-card-content>
+  </ion-item>
+</ion-card>
+
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
   </div>
 </ion-content>
